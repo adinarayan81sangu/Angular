@@ -1,0 +1,37 @@
+td,th{
+    text-align: center;
+}
+th{
+    color: goldenrod;
+}
+.heading{
+    font-size: 40px;
+    color: goldenrod;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.btn{
+    float: right;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+.btn1{
+    background-color:red;
+    width: 40px;
+    color: red;
+    border: none;
+    outline: none;
+}
+.names{
+    margin-top: 3%;
+}
+.mat-btn{
+    margin-right: 2%;
+    border-radius: 20px;
+    width: 100px;
+}
+/* .rais-btn1{
+    border-radius: 20px;
+    width: 100px;
+} */

@@ -1,0 +1,442 @@
+<mat-card>
+    <div class="row">
+        <div class="col-lg-6 col-sm-6">
+            <h1 style="color: goldenrod;">Manage Projects</h1>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <button mat-raised-button data-backdrop="false" color="primary" class="btn" data-toggle="modal"
+                data-target="#ADDPROJECT">ADD
+                Projects</button>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>S.NO</th>
+                    <th>Project_ID</th>
+                    <th>Project_NAME</th>
+                    <th> Created By</th>
+                    <th> Created Date</th>
+                    <th>Modified Date</th>
+                    <th>Actions</th>
+                    <th>Assign usersto Project</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let project of projects">
+                    <td>{{project.sno}}</td>
+                    <td>{{project.Project_ID}}</td>
+                    <td>{{project.Project_NAME}}</td>
+                    <td>{{project.CreatedBy}}</td>
+                    <td>{{project. CreatedDate}}</td>
+                    <td>{{project.ModifiedDate}}</td>
+                    <td> <button mat-button data-backdrop="false" data-toggle="modal"
+                            data-target="#EditProject">Edit</button>
+                        <button mat-button data-backdrop="false" data-toggle="modal"
+                            data-target="#Dleteproject">Delete</button>
+                    </td>
+                    <td> <button mat-button data-backdrop="false" data-toggle="modal"
+                            data-target="#CreatTask">Assign</button>
+                        <button mat-button data-backdrop="false" data-toggle="modal" data-target="#view">View</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</mat-card>
+<!-- <div class="container">
+    <mat-card>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6">
+                <h1 style="color: goldenrod;">Manage Projects</h1>
+            </div>
+            <div class="col-lg-6 col-sm-6">
+                <button mat-raised-button data-backdrop="false" color="primary" class="btn" data-toggle="modal" data-target="#ADDPROJECT">ADD
+                    Projects</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>S.NO</th>
+                                <th>Project_ID</th>
+                                <th>Project_NAME</th>
+                                <th> Created By</th>
+                                <th> Created Date</th>
+                                <th>Modified Date</th>
+                                <th>Actions</th>
+                                <th>Assignusersto Project</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>PROJ_0001</td>
+                                <td>EMS</td>
+                                <td>Admin</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#EditProject">Edit</button>
+                                    <button mat-button data-backdrop="false" data-toggle="modal" data-target="#Dleteproject">Delete</button>
+                                </td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#CreatTask">Assign</button>
+                                    <button mat-button data-backdrop="false" data-toggle="modal" data-target="#view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>PROJ_0002</td>
+                                <td>Fanism</td>
+                                <td>Admin</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#EditProject">Edit</button>
+                                    <button mat-button data-backdrop="false" data-toggle="modal" data-target="#Dleteproject">Delete</button>
+                                </td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#CreatTask">Assign</button>
+                                    <button mat-button data-backdrop="false" data-toggle="modal" data-target="#view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>PROJ_0003</td>
+                                <td>Pickelball</td>
+                                <td>Admin</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#EditProject">Edit</button>
+                                    <button mat-button data-backdrop="false" data-toggle="modal" data-target="#Dleteproject">Delete</button>
+                                </td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#CreatTask">Assign</button>
+                                    <button mat-button data-backdrop="false" data-toggle="modal" data-target="#view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>PROJ_0004</td>
+                                <td>abc</td>
+                                <td>Admin</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#EditProject">Edit</button>
+                                    <button mat-button data-backdrop="false" data-toggle="modal" data-target="#Dleteproject">Delete</button>
+                                </td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#CreatTask">Assign</button>
+                                    <button mat-button data-backdrop="false" data-toggle="modal" data-target="#view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>PROJ_0005</td>
+                                <td>alt</td>
+                                <td>Admin</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#EditProject">Edit</button>
+                                    <button mat-button data-backdrop="false" data-toggle="modal" data-target="#Dleteproject">Delete</button>
+                                </td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#CreatTask">Assign</button>
+                                    <button mat-button data-backdrop="false" data-toggle="modal" data-target="#view">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>PROJ_0006</td>
+                                <td>pqr</td>
+                                <td>Admin</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#EditProject">Edit</button>
+                                    <button mat-button data-backdrop="false" data-toggle="modal" data-target="#Dleteproject">Delete</button>
+                                </td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#CreatTask">Assign</button>
+                                    <button mat-button data-backdrop="false" data-toggle="modal" data-target="#view">View</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div> -->
+<!--add project-->
+<div class="modal fade" id="ADDPROJECT" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" mat-raised-button color="warn" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true" style="font-size: 30px;" color="primary">X</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h1 style="text-align: center;">ADD Project Form</h1>
+                <div class="row">
+                    <div class="col-sm-6" style="text-align: center; margin-top: 2%;">
+                        <h2>project Nmae:</h2>
+                    </div>
+                    <div class="col-sm-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Enter Project Name" required>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-12">
+                        <button mat-raised-button color="primary" id="mat-btn">ADD</button>
+                        <button mat-raised-button color="primary" id="mat-btn">CLEAR</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--Edit project-->
+<div class="modal fade" id="EditProject" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" color="primary" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>EDIT Project Form</h1>
+                    </div>
+                </div><br>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-3">
+
+                    </div>
+                    <div class="col-lg-3"><br>
+                        <h4>Project ID:</h4><br>
+                        <h4>Project Name:</h4>
+
+                    </div>
+                    <div class="col-lg-3">
+                        <mat-form-field class="example-full-width">
+                            <input matInput required>
+                        </mat-form-field>
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Enter Project Name" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-lg-3">
+
+                    </div>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-12">
+                        <button mat-raised-button color="primary" id="mat-btn">UPDate</button>
+                        <button mat-raised-button color="primary" id="mat-btn">CLEAR</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--Delete project-->
+<div class="modal fade" id="Dleteproject" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" color="primary" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>DELETE Project Form</h1>
+                    </div>
+                </div><br>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-3">
+
+                    </div>
+                    <div class="col-lg-3"><br>
+
+
+                    </div>
+                    <div class="col-lg-3">
+
+                    </div>
+                    <div class="col-lg-3">
+
+                    </div>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-12">
+                        <button mat-raised-button color="primary" id="mat-btn">DELETE</button>
+                        <button mat-raised-button color="primary" id="mat-btn">CLEAR</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--create Task-->
+<div class="modal fade" id="CreatTask" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="">
+                <button class="close btn1" bg-primary data-dismiss="modal">X</button>
+                <h1 style="margin-left: 30%;">Creat Task Form</h1>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6  names" style="text-align: center;">
+                            <h3>Project-ID:</h3><br>
+                            <h3>Project Name:</h3><br>
+                            <h3>Slect User:</h3><br>
+                            <h3>Slect Role:</h3><br>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="First Name">
+                            </mat-form-field><br><br>
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Middle Name">
+                            </mat-form-field><br>
+                            <mat-form-field>
+                                <mat-label>Select</mat-label>
+                                <mat-select>
+                                    <mat-option value="one">Adi</mat-option>
+                                    <mat-option value="two">Sravani</mat-option>
+                                </mat-select>
+                            </mat-form-field><br>
+                            <mat-form-field>
+                                <mat-label>Select</mat-label>
+                                <mat-select>
+                                    <mat-option value="one">Adi</mat-option>
+                                    <mat-option value="two">Sravani</mat-option>
+                                </mat-select>
+                            </mat-form-field><br><br>
+
+
+
+                        </div>
+                        <div class="row" style="text-align: center;">
+                            <div class="col-sm-12">
+                                <button mat-raised-button color="primary" class="mat-btn">Update</button>
+                                <button mat-raised-button color="primary" class="mat-btn">clear</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--Assign users to project-->
+<!-- <div class="container" id="view" aria-hidden="true">
+    <mat-card>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Assign users to project</h1>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-sm-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>S.NO</th>
+                                <th>Project Name</th>
+                                <th>EMP ID</th>
+                                <th>EMP Name </th>
+                                <th>EMP Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>EMS</td>
+                                <td>EMP-001</td>
+                                <td> adi</td>
+                                <td>Team Member</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>EMS</td>
+                                <td>EMP-002</td>
+                                <td> sravani</td>
+                                <td>Team Member</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div> -->
+<mat-card>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Assign users to project</h1>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>S.NO</th>
+                    <th>Project Name</th>
+                    <th>EMP ID</th>
+                    <th>EMP Name </th>
+                    <th>EMP Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>EMS</td>
+                    <td>EMP-001</td>
+                    <td> adi</td>
+                    <td>Team Member</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</mat-card>

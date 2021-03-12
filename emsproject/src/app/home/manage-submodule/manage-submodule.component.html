@@ -1,0 +1,439 @@
+<mat-card>
+    <div class="row">
+        <div class="col-lg-6 col-sm-6">
+            <h1 style="color: goldenrod;">Manage SubModule</h1>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <button mat-raised-button data-backdrop="false" color="primary" class="btn" data-toggle="modal"
+                data-target="#createsubmodule">CREATE SUBMODULE</button>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr >
+                    <th>S.NO</th>
+                    <th>Project_ID</th>
+                    <th>Project_NAME</th>
+                    <th>Module Id</th>
+                    <th>Module Name</th>
+                    <th>SubModule Id</th>
+                    <th>SubModule Name</th>
+                    <th>Creadted By</th>
+                    <th>Creadted Date</th>
+                    <th>Modified Date</th>
+                    <th>Actions</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let sub of submodule">
+                    <td>{{sub.sno}}</td>
+                    <td>{{sub.Project_ID}}</td>
+                    <td>{{sub.Project_NAME}}</td>
+                    <td>{{sub.ModuleId}}</td>
+                    <td>{{sub.ModuleName}}</td>
+                    <td>{{sub.SubModuleId}}</td>
+                    <td>{{sub.SubModuleName}}</td>
+                    <td>{{sub.CreadtedBy}}</td>
+                    <td>{{sub.CreadtedDate}}</td>
+                    <td>{{sub.ModifiedDate}}</td>
+                    <td> <button mat-button data-backdrop="false" data-toggle="modal"
+                            data-target="#EditSubModule">Edit</button>
+                        <button mat-button data-backdrop="false" data-toggle="modal"
+                            data-target="#DleteSubModule">Delete</button>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</mat-card>
+
+
+
+<!-- <div class="container-fluid">
+    <mat-card>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6">
+                <h1 style="color: goldenrod;">Manage SubModule</h1>
+            </div>
+            <div class="col-lg-6 col-sm-6">
+                <button mat-raised-button data-backdrop="false" color="primary" class="btn" data-toggle="modal"
+                    data-target="#createsubmodule">CREATE SUBMODULE</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+            <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>S.NO</th>
+                                <th>Project_ID</th>
+                                <th>Project_NAME</th>
+                                <th>Module Id</th>
+                                <th>Module Name</th>
+                                <th>SubModule Id</th>
+                                <th>SubModule Name</th>
+                                <th>Creadted By</th>
+                                <th>Creadted Date</th>
+                                <th>Modified Date</th>
+                                <th>Actions</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>PROJ_0001</td>
+                                <td>EMS</td>
+                                <td>Mod-01</td>
+                                <td>Module1</td>
+                                <td>SUb-Mod-001</td>
+                                <td>SubModule1</td>
+                                <td>Admin</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#EditSubModule">Edit</button>
+                                    <button mat-button data-backdrop="false" data-toggle="modal" data-target="#DleteSubModule">Delete</button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>PROJ_0002</td>
+                                <td>Fanism</td>
+                                <td>mod-02</td>
+                                <td>Module2</td>
+                                <td>SUB-MOD-002</td>
+                                <td>SubModule2</td>
+                                <td>Admin</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#EditSubModule">Edit</button>
+                                    <button mat-button data-backdrop="false" data-toggle="modal" data-target="#DleteSubModule">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>PROJ_0003</td>
+                                <td>Pickelball</td>
+                                <td>Mod-03</td>
+                                <td>module3</td>
+                                <td>SUB-MOD-003</td>
+                                <td>Submodule3</td>
+                                <td>Admin</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#EditSubModule">Edit</button>
+                                    <button mat-button data-backdrop="false" data-toggle="modal" data-target="#DleteSubModule">Delete</button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>PROJ_0004</td>
+                                <td>abc</td>
+                                <td>Mod-04</td>
+                                <td>Module4</td>
+                                <td>SUB-MOD-004</td>
+                                <td>Submodule4</td>
+                                <td>Admin</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#EditSubModule">Edit</button>
+                                    <button mat-button data-backdrop="false" data-toggle="modal" data-target="#DleteSubModule">Delete</button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>PROJ_0005</td>
+                                <td>alt</td>
+                                <td>Mod-5</td>
+                                <td>module5</td>
+                                <td>SUB-MOD-005</td>
+                                <td>Submodule5</td>
+                                <td>Admin</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#EditSubModule">Edit</button>
+                                    <button mat-button data-backdrop="false" data-toggle="modal" data-target="#DleteSubModule">Delete</button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>PROJ_0006</td>
+                                <td>pqr</td>
+                                <td>Mod-06</td>
+                                <td>Module6</td>
+                                <td>SUB_MOD_006</td>
+                                <td>Submodule6</td>
+                                <td>Admin</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#EditSubModule">Edit</button>
+                                    <button mat-button data-backdrop="false" data-toggle="modal" data-target="#DleteSubModule">Delete</button>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div> -->
+<!--create submodule-->
+<div class="modal fade" id="createsubmodule" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" color="primary" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>Create Sub-Module Form</h1>
+                    </div>
+                </div><br>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-6" style="margin-top: 2%;">
+                        <h4>Selete Project Id</h4>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Select Project id:</mat-label>
+                            <mat-select>
+                                <mat-option>
+                                    adi
+                                </mat-option>
+                                <mat-option>
+                                    sravani
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6" style="margin-top: 2%;">
+                        <h4>Project Name:</h4>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Project name">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6" style="margin-top: 2%;">
+                        <h4>Select Module Id</h4>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Select Module id:</mat-label>
+                            <mat-select>
+                                <mat-option>
+
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-6" style="margin-top: 2%;">
+                        <h4>Module Name:</h4>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Module name" required>
+                        </mat-form-field>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-6" style="margin-top: 2%;">
+                        <h4> Sub ModuleName:</h4>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder=" Sub ModuleName" required>
+                        </mat-form-field>
+                    </div>
+
+                </div>
+
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-12">
+                        <button mat-raised-button color="primary" id="mat-btn">ADD</button>
+                        <button mat-raised-button color="primary" id="mat-btn">CLEAR</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Edit submodule-->
+<div class="modal fade" id="EditSubModule" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" mat-raised-button color="accent" class="close" color="primary"
+                    data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>EDIT Sub Module Form</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                    </div>
+                    <div class="col-lg-3" style="margin-top: 2%;">
+                        <h3>Project ID:</h3>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Project Id" required>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                    </div>
+                    <div class="col-lg-3" style="margin-top: 2%;">
+                        <h3>Project Name:</h3>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Project Name" required>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                    </div>
+                    <div class="col-lg-3" style="margin-top: 2%;">
+                        <h3>Module ID:</h3>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Module Id" required>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                    </div>
+                    <div class="col-lg-3" style="margin-top: 2%;">
+                        <h3>Module Name:</h3>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Module Name" required>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                    </div>
+                    <div class="col-lg-3" style="margin-top: 2%;">
+                        <h3>Sub-Mdule ID:</h3>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Sub-Module Id" required>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                    </div>
+                    <div class="col-lg-3" style="margin-top: 2%;">
+                        <h3>Sub Module Name:</h3>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Sub Module Name" required>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-12">
+                        <button mat-raised-button color="primary" id="mat-btn">UPDate</button>
+                        <button mat-raised-button color="primary" id="mat-btn">CLEAR</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--Delete form-->
+<div class="modal fade" id="DleteSubModule" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" color="primary" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>DELETE Sub_Module Form</h1>
+                    </div>
+                </div><br>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-3">
+
+                    </div>
+                    <div class="col-lg-3"><br>
+
+
+                    </div>
+                    <div class="col-lg-3">
+
+                    </div>
+                    <div class="col-lg-3">
+
+                    </div>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-12">
+                        <button mat-raised-button color="primary" id="mat-btn">DELETE</button>
+                        <button mat-raised-button color="primary" id="mat-btn">CLEAR</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>

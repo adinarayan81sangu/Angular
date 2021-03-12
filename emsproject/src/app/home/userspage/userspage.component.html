@@ -1,0 +1,377 @@
+<mat-card>
+<div class="row">
+  <div class="col-lg-6 col-md-6">
+    <h1>Manage Users</h1>
+  </div>
+  <div class="col-lg-6 col-md-6">
+    <button mat-raised-button class="btn" data-dismiss="modal" data-backdrop="false" data-toggle="modal"
+      data-target="#ADD">ADD Users</button>
+  </div>
+</div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>S.NO</th>
+            <th>EMP_ID</th>
+            <th>Username</th>
+            <th>First Name</th>
+            <th>Middle Name</th>
+            <th>Last Name</th>
+            <th>Created By</th>
+            <th>Created Date</th>
+            <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.sno}}</td>
+            <td>{{user.EMP_ID}}</td>
+            <td>{{user.Username}}</td>
+            <td>{{user.FirstName}}</td>
+            <td>{{user.MiddleName}}</td>
+            <td>{{user.LastName}}</td>
+            <td>{{user.CreatedBy}}</td>
+            <td>{{user.CreatedDate}}</td>
+            <td>
+              <button mat-button data-toggle="modal" data-dismiss="modal" data-backdrop="false"
+                data-target="#Edit">Edit</button>
+              <button mat-button data-toggle="modal" data-dismiss="modal" data-backdrop="false"
+                data-target="#Delete">Delete</button>
+            </td>   
+  </tbody>
+</table>
+</mat-card>
+
+
+
+
+
+
+
+
+<!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8"> -->
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <!-- <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+  </ng-container> -->
+
+  <!-- Name Column -->
+  <!-- <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container> -->
+
+  <!-- Weight Column -->
+  <!-- <ng-container matColumnDef="weight">
+    <th mat-header-cell *matHeaderCellDef> Weight </th>
+    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+  </ng-container> -->
+
+  <!-- Symbol Column -->
+  <!-- <ng-container matColumnDef="symbol">
+    <th mat-header-cell *matHeaderCellDef> Symbol </th>
+    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table> -->
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+  <mat-card>
+    <div class="row">
+      <div class="col-lg-6">
+        <h1>Manage Users</h1>
+      </div>
+      <div class="col-lg-6">
+        <button mat-raised-button class="btn" data-dismiss="modal" data-backdrop="false" data-toggle="modal"
+          data-target="#ADD">ADD Users</button>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>S.NO</th>
+            <th>EMP_ID</th>
+            <th>Username</th>
+            <th>First Name</th>
+            <th>Middle Name</th>
+            <th>Last Name</th>
+            <th>Created By</th>
+            <th>Created Date</th>
+            <th>Actions</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>EMP_001</td>
+            <td>Adinarayana</td>
+            <td>Sangu</td>
+            <td>Adi</td>
+            <td>Narayana</td>
+            <td>Admin</td>
+            <td>2021-02-12 9:30</td>
+            <td>
+              <button mat-button data-toggle="modal" data-dismiss="modal" data-backdrop="false"
+                data-target="#Edit">Edit</button>
+              <button mat-button data-toggle="modal" data-dismiss="modal" data-backdrop="false"
+                data-target="#Delete">Delete</button>
+            </td>
+
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>EMP_002</td>
+            <td>sravani</td>
+            <td>pemmasani</td>
+            <td>sravani</td>
+            <td>venkata</td>
+            <td>Admin</td>
+            <td>2021-02-12 9:30</td>
+            <td>
+              <button mat-button data-toggle="modal" data-dismiss="modal" data-backdrop="false"
+                data-target="#Edit">Edit</button>
+              <button mat-button data-toggle="modal" data-dismiss="modal" data-backdrop="false"
+                data-target="#Delete">Delete</button>
+            </td>
+
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>EMP_003</td>
+            <td>Adinarayana</td>
+            <td>Sangu</td>
+            <td>Adi</td>
+            <td>Narayana</td>
+            <td>Admin</td>
+            <td>2021-02-12 9:30</td>
+            <td>
+              <button mat-button data-toggle="modal" data-dismiss="modal" data-backdrop="false"
+                data-target="#Edit">Edit</button>
+              <button mat-button data-toggle="modal" data-dismiss="modal" data-backdrop="false"
+                data-target="#Delete">Delete</button>
+            </td>
+
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>EMP_004</td>
+            <td>Adinarayana</td>
+            <td>Sangu</td>
+            <td>Adi</td>
+            <td>Narayana</td>
+            <td>Admin</td>
+            <td>2021-02-12 9:30</td>
+            <td>
+              <button mat-button data-toggle="modal" data-dismiss="modal" data-backdrop="false"
+                data-target="#Edit">Edit</button>
+              <button mat-button data-toggle="modal" data-dismiss="modal" data-backdrop="false"
+                data-target="#Delete">Delete</button>
+            </td>
+
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>EMP_005</td>
+            <td>Adinarayana</td>
+            <td>Sangu</td>
+            <td>Adi</td>
+            <td>Narayana</td>
+            <td>Admin</td>
+            <td>2021-02-12 9:30</td>
+            <td>
+              <button mat-button data-toggle="modal" data-dismiss="modal" data-backdrop="false"
+                data-target="#Edit">Edit</button>
+              <button mat-button data-toggle="modal" data-dismiss="modal" data-backdrop="false"
+                data-target="#Delete">Delete</button>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </mat-card>
+</div> -->
+
+
+<!-- Add user form -->
+<!-- <div class="modal fade" id="ADD" role="dialog">
+  <div class="modal-dialog" role="document">
+
+    <!-- Modal content-->
+    <!-- <div class="modal-content">
+      <div class="">
+        <button class="close btn1" bg-primary data-dismiss="modal">X</button>
+        <h1 style="margin-left: 30%;">ADD Uesr Form</h1>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12 col-lg-6   names" style="text-align: center;">
+              <h3>First Name:</h3><br>
+              <h3>Middle Name:</h3><br>
+              <h3>Last Name:</h3><br>
+              <h3>User Name:</h3><br>
+              <h3>Password:</h3><br>
+              <h3>Mobile Number:</h3><br>
+              <h3>Email Id:</h3>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <div class="example-container">
+                <mat-form-field appearance="fill">
+                  <mat-label>Enter first name</mat-label>
+                  <input matInput placeholder="Enter first name" [formControl]="name" required>
+                  <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+              </div>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Middle Name" required>
+              </mat-form-field><br>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Last Name" required>
+              </mat-form-field><br>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="User Name" required>
+              </mat-form-field><br><br>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Password" required>
+              </mat-form-field><br>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Mobile Number" required>
+              </mat-form-field><br>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Email Id" required>
+              </mat-form-field>
+            </div>
+            <div class="row" style="text-align: center;">
+              <div class="col-sm-12">
+                <button mat-raised-button color="primary" class="mat-btn">Add</button>
+                <button mat-raised-button color="primary" class="mat-btn">clear</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div> -->
+
+<!--Edit user  form-->
+<!-- <div class="modal fade" id="Edit" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <!-- <div class="modal-content">
+      <div class="">
+        <button class="close btn1" bg-primary data-dismiss="modal">X</button>
+        <h1 style="margin-left: 30%;">Edit Uesr Form</h1>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6  names" style="text-align: center;">
+              <h3>First Name:</h3><br>
+              <h3>Middle Name:</h3><br>
+              <h3>Last Name:</h3><br>
+              <h3>User Name:</h3><br>
+              <h3>Password:</h3><br>
+              <h3>Mobile Number:</h3><br>
+              <h3>Email Id:</h3>
+            </div>
+            <div class="col-sm-6">
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="First Name">
+              </mat-form-field><br><br>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Middle Name">
+              </mat-form-field><br>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Last Name">
+              </mat-form-field><br>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="User Name">
+              </mat-form-field><br><br>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Password">
+              </mat-form-field><br>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Mobile Number">
+              </mat-form-field><br>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Email Id">
+              </mat-form-field>
+            </div>
+            <div class="row" style="text-align: center;">
+              <div class="col-sm-12">
+                <button mat-raised-button color="primary" class="mat-btn">Update</button>
+                <button mat-raised-button color="primary" class="mat-btn">clear</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div> 
+ -->
+
+<!--Delete user Form -->
+<!-- <div class="modal fade" id="Delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" color="primary" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">X</span>
+        </button>
+      </div>
+      <div class="modal-body" style="text-align: center;">
+        <div class="row">
+          <div class="col-sm-12">
+            <h1>Delete User Form</h1>
+          </div>
+        </div>
+        <div class="col-sm-12">
+
+        </div>
+        <div class="col-sm-12">
+          <button mat-raised-button class="mat-btn" color="primary">Delete</button>
+          <button mat-raised-button class="mat-btn" color="primary">Cancle</button>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div> -->

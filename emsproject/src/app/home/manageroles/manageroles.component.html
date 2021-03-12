@@ -1,0 +1,292 @@
+<mat-card>
+<div class="row">
+    <div class="col-lg-6 col-sm-6">
+        <h1 style="color: goldenrod;">Manage Roles</h1>
+    </div>
+    <div class="col-lg-6 col-sm-6">
+        <button data-dismiss="modal"  mat-raised-button color="primary" class="btn" data-toggle="modal"
+            data-backdrop="false" data-target="#ADDROLE">ADD
+            ROLE</button>
+    </div>
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>S.NO</th>
+            <th>ROLE_ID</th>
+            <th>ROLE NAME</th>
+            <th>ROLE Created By</th>
+            <th>ROLE Created Date</th>
+            <th>Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let role of roles">
+            <td>{{role.sno}}</td>
+            <td>{{role.Role_id}}</td>
+            <td>{{role.Rolename}}</td>
+            <td>{{role.RoleCreatedBy}}</td>
+            <td>{{role.RoleCreatedDate}}</td>
+            <td> <button mat-button data-toggle="modal" data-target="#EditRole"
+                    data-backdrop="false">Edit</button>
+                <button mat-button data-toggle="modal" data-target="#DleteRole"
+                    data-backdrop="false">Delete</button>
+            </td>
+        </tr>
+</tbody>
+</table>
+</mat-card>
+
+
+<!-- <div class="container">
+    <mat-card>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6">
+                <h1 style="color: goldenrod;">Manage Roles</h1>
+            </div>
+            <div class="col-lg-6 col-sm-6">
+                <button data-dismiss="modal"  mat-raised-button color="primary" class="btn" data-toggle="modal"
+                    data-backdrop="false" data-target="#ADDROLE">ADD
+                    ROLE</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>S.NO</th>
+                                <th>ROLE_ID</th>
+                                <th>ROLE NAME</th>
+                                <th>ROLE Created By</th>
+                                <th>ROLE Created Date</th>
+                                <th>Actions</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>ROLE_0001</td>
+                                <td>Project Manager</td>
+                                <td>Admin</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td> <button mat-button data-toggle="modal" data-target="#EditRole"
+                                        data-backdrop="false">Edit</button>
+                                    <button mat-button data-toggle="modal" data-target="#DleteRole"
+                                        data-backdrop="false">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>ROLE_0002</td>
+                                <td>HR</td>
+                                <td>Admin</td>
+                                <td>2021-02-13 03:28:04 pm</td>
+                                <td>
+                                    <button mat-button data-toggle="modal" data-target="#EditRole"
+                                    data-backdrop="false">Edit</button>
+                                <button mat-button data-toggle="modal" data-target="#DleteRole"
+                                    data-backdrop="false">Delete</button>                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>ROLE_0003</td>
+                                <td>TeamLead</td>
+                                <td>Admin</td>
+                                <td>2021-02-13 03:30:10 pm</td>
+                                <td> <button mat-button data-toggle="modal" data-target="#EditRole"
+                                    data-backdrop="false">Edit</button>
+                                <button mat-button data-toggle="modal" data-target="#DleteRole"
+                                    data-backdrop="false">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>ROLE_0004</td>
+                                <td>TeamMember</td>
+                                <td>Admin</td>
+                                <td>2021-02-13 03:35:15 pm</td>
+                                <td> <button mat-button data-toggle="modal" data-target="#EditRole"
+                                    data-backdrop="false">Edit</button>
+                                <button mat-button data-toggle="modal" data-target="#DleteRole"
+                                    data-backdrop="false">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>ROLE_0005</td>
+                                <td>Team Manager</td>
+                                <td>Admin</td>
+                                <td>2021-02-13 03:40:04 pm</td>
+                                <td> <button mat-button data-toggle="modal" data-target="#EditRole"
+                                    data-backdrop="false">Edit</button>
+                                <button mat-button data-toggle="modal" data-target="#DleteRole"
+                                    data-backdrop="false">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>ROLE_0006</td>
+                                <td>Mnager</td>
+                                <td>Admin</td>
+                                <td>2021-02-13 03:45:23 pm</td>
+                                <td> <button mat-button data-toggle="modal" data-target="#EditRole"
+                                    data-backdrop="false">Edit</button>
+                                <button mat-button data-toggle="modal" data-target="#DleteRole"
+                                    data-backdrop="false">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div> -->
+<!--add role-->
+<div class="modal fade" id="ADDROLE" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" color="primary" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>ADD ROLE Form</h1>
+                    </div>
+                </div><br>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <h4>Role Name:</h4>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Enter Role Name" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+
+                    </div>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-12">
+                        <button mat-raised-button color="primary" id="mat-btn">ADD</button>
+                        <button mat-raised-button color="primary" id="mat-btn">CLEAR</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--Edit Role-->
+<div class="modal fade" id="EditRole" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" color="primary" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>ADD ROLE Form</h1>
+                    </div>
+                </div><br>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-3">
+
+                    </div>
+                    <div class="col-lg-3"><br>
+                        <h4>Role ID:</h4><br>
+                        <h4>Role Name:</h4>
+
+                    </div>
+                    <div class="col-lg-3">
+                        <mat-form-field class="example-full-width">
+                            <input matInput required>
+                        </mat-form-field>
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Enter Role Name" required>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-lg-3">
+
+                    </div>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-12">
+                        <button mat-raised-button color="primary" id="mat-btn">UpDate</button>
+                        <button mat-raised-button color="primary" id="mat-btn">CLEAR</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="DleteRole" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" color="primary" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>DELETE ROLE Form</h1>
+                    </div>
+                </div><br>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-3">
+
+                    </div>
+                    <div class="col-lg-3"><br>
+
+
+                    </div>
+                    <div class="col-lg-3">
+
+                    </div>
+                    <div class="col-lg-3">
+
+                    </div>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-12">
+                        <button mat-raised-button color="primary" id="mat-btn">DELETE</button>
+                        <button mat-raised-button color="primary" id="mat-btn">CLEAR</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>

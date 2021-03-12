@@ -1,0 +1,438 @@
+<mat-card>
+    <div class="row">
+        <div class="col-lg-6 col-sm-6">
+            <h1 style="color: goldenrod;">Manage Sprints</h1>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <button mat-raised-button data-backdrop="false" color="primary" class="btn" data-toggle="modal"
+                data-target="#ADDSPRINT">ADD SPRINT</button>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>S.NO</th>
+                    <th>Project_ID</th>
+                    <th>Project_NAME</th>
+                    <th>Sprint Name</th>
+                    <th>Sprint Id</th>
+                    <th>Starting Date</th>
+                    <th>Ending Date</th>
+                    <th>Sprint Master</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let sprint of sprints">
+                    <td>{{sprint.sno}}</td>
+                    <td>{{sprint.Project_ID}}</td>
+                    <td>{{sprint.Project_NAME}}</td>
+                    <td>{{sprint.SprintId}}</td>
+                    <td>{{sprint.SprintName}}</td>
+                    <td>{{sprint.StartingDate}}</td>
+                    <td>{{sprint.EndingDate}}</td>
+                    <td>{{sprint.SprintMaster}}</td>
+                    <td> <button mat-button data-backdrop="false" data-toggle="modal"
+                            data-target="#EDITSPRINT">Edit</button>
+                        <button mat-button data-backdrop="false" data-toggle="modal"
+                            data-target="#DleteSprint">Delete</button>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</mat-card>
+
+<!-- <div class="container-fluid">
+    <mat-card>
+        <div class="row">
+            <div class="col-lg-6 col-sm-6">
+                <h1 style="color: goldenrod;">Manage Sprints</h1>
+            </div>
+            <div class="col-lg-6 col-sm-6">
+                <button mat-raised-button data-backdrop="false" color="primary" class="btn" data-toggle="modal"
+                    data-target="#ADDSPRINT">ADD SPRINT</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>S.NO</th>
+                                <th>Project_ID</th>
+                                <th>Project_NAME</th>
+                                <th>Sprint Name</th>
+                                <th>Sprint Id</th>
+                                <th>Starting Date</th>
+                                <th>Ending Date</th>
+                                <th>Sprint Master</th>
+                                <th>Actions</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>PROJ_0001</td>
+                                <td>EMS</td>
+                                <td>SPR-01</td>
+                                <td>Sprint1</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>Adi</td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#EDITSPRINT">Edit</button>
+                                    <button mat-button  data-backdrop="false" data-toggle="modal" data-target="#DleteSprint">Delete</button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>PROJ_0002</td>
+                                <td>Fanism</td>
+                                <td>SPR-002</td>
+                                <td>Sprint2</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>sravani</td>
+                                <td><button mat-button data-backdrop="false" data-toggle="modal" data-target="#EDITSPRINT">Edit</button>
+                                    <button mat-button  data-backdrop="false" data-toggle="modal" data-target="#DleteSprint">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>PROJ_0003</td>
+                                <td>Pickelball</td>
+                                <td>SPR3</td>
+                                <td>Sprint-003</td>
+                                
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>Adi</td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#EDITSPRINT">Edit</button>
+                                    <button mat-button  data-backdrop="false" data-toggle="modal" data-target="#DleteSprint">Delete</button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>PROJ_0004</td>
+                                <td>abc</td>
+                                <td>SPR4</td>
+                                <td>Sprint-004</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>Sravani</td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#EDITSPRINT">Edit</button>
+                                    <button mat-button  data-backdrop="false" data-toggle="modal" data-target="#DleteSprint">Delete</button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>PROJ_0005</td>
+                                <td>alt</td>
+                                <td>SPR5</td>
+                                <td>Sprint-005</td>
+                                
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>Adi</td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#EDITSPRINT">Edit</button>
+                                    <button mat-button  data-backdrop="false" data-toggle="modal" data-target="#DleteSprint">Delete</button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>PROJ_0006</td>
+                                <td>pqr</td>
+                                <td>SPR6</td>
+                                <td>Sprint_006</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>2021-02-13 03:25:45 pm</td>
+                                <td>Sravani</td>
+                                <td> <button mat-button data-backdrop="false" data-toggle="modal" data-target="#EDITSPRINT">Edit</button>
+                                    <button mat-button  data-backdrop="false" data-toggle="modal" data-target="#DleteSprint">Delete</button>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div> -->
+<!--Add sprint-->
+<div class="modal fade" id="ADDSPRINT" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" color="primary" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>ADD Sprint Form</h1>
+                    </div>
+                </div><br>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-6" style="margin-top: 2%;">
+                        <h4>Selete Project Id</h4>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Select Project id:</mat-label>
+                            <mat-select>
+                                <mat-option>
+
+                                </mat-option>
+                                <mat-option>
+
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6" style="margin-top: 2%;">
+                        <h4>Project Name:</h4>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Project name">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6" style="margin-top: 2%;">
+                        <h4>Sprint Name:</h4>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Sprint Name" required>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-6" style="margin-top: 2%;">
+                        <h4>Sprint Starting Date</h4>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Choose a date</mat-label>
+                            <input matInput [matDatepicker]="picker">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-6" style="margin-top: 2%;">
+                        <h4>Sprint Ending Date</h4>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Choose a date</mat-label>
+                            <input matInput [matDatepicker]="picker1">
+                            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                            <mat-datepicker #picker1></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6" style="margin-top: 2%;">
+                        <h4>Sprint Master</h4>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Sprint Master" required>
+                        </mat-form-field>
+                    </div>
+
+                </div>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-12">
+                        <button mat-raised-button color="primary" id="mat-btn">ADD</button>
+                        <button mat-raised-button color="primary" id="mat-btn">CLEAR</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Edit Sprint-->
+<div class="modal fade" id="EDITSPRINT" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" color="primary" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>ADD Sprint Form</h1>
+                    </div>
+                </div><br>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-6" style="margin-top: 2%;">
+                        <h4>Selete Project Id</h4>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Select Project id:</mat-label>
+                            <mat-select>
+                                <mat-option>
+
+                                </mat-option>
+                                <mat-option>
+
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6" style="margin-top: 2%;">
+                        <h4>Project Name:</h4>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Project name">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6" style="margin-top: 2%;">
+                        <h4>Sprint Name:</h4>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Sprint Name" required>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <br>
+                <div class="row">
+                    <div class="col-lg-6" style="margin-top: 2%;">
+                        <h4>Sprint Starting Date</h4>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field>
+                            <mat-label>Choose a date</mat-label>
+                            <input matInput [matDatepicker]="picker2">
+                            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                            <mat-datepicker #picker2></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6" style="margin-top: 2%;">
+                        <h4>Sprint Ending Date</h4>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field>
+                            <mat-label>Choose a date</mat-label>
+                            <input matInput [matDatepicker]="picker3">
+                            <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                            <mat-datepicker #picker3></mat-datepicker>
+                        </mat-form-field>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-6" style="margin-top: 2%;">
+                        <h4>Sprint Master</h4>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Sprint Master" required>
+                        </mat-form-field>
+                    </div>
+
+                </div>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-12">
+                        <button mat-raised-button color="primary" id="mat-btn">ADD</button>
+                        <button mat-raised-button color="primary" id="mat-btn">CLEAR</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Delete Sprint-->
+<div class="modal fade" id="DleteSprint" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" color="primary" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">X</span>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>DELETE Sub_Module Form</h1>
+                    </div>
+                </div><br>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-3">
+
+                    </div>
+                    <div class="col-lg-3"><br>
+
+
+                    </div>
+                    <div class="col-lg-3">
+
+                    </div>
+                    <div class="col-lg-3">
+
+                    </div>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <div class="col-lg-12">
+                        <button mat-raised-button color="primary" id="mat-btn">DELETE</button>
+                        <button mat-raised-button color="primary" id="mat-btn">CLEAR</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>

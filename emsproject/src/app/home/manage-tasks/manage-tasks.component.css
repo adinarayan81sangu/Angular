@@ -1,0 +1,20 @@
+th,td{
+    text-align: center;
+    
+}
+th{
+    color: goldenrod;
+}
+.btn{
+    float: right;
+    border-radius: 20px;
+    outline: none; 
+}
+#mat-btn{
+    margin-right: 5%;
+    border-radius: 20px;
+    width: 100px;
+}
+table,tr,td{
+    border: 2px solid black;
+}

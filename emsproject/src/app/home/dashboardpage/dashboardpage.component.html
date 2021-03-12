@@ -1,0 +1,171 @@
+<mat-sidenav-container>
+    <mat-sidenav  [opened]="isShowing" mode="side" >
+        <ul class="navbar-nav" class="side-img">
+            <li class="nav-item">
+                <img src="/assets/images/dash.jpg" height="40px">
+                <p> <a routerLink="/dashboardpage/dashboard" class="nav-link">Dashboard</a></p>
+            </li>
+            <li class="nav-item">
+                <img src="/assets/images/users.jpg" height="40px">
+                <p> <a routerLink="/dashboardpage/userspage" class="nav-link">Users</a></p>
+            </li>
+            <li class="nav-item">
+                <img src="/assets/images/grp.jpg" height="40px">
+                <p> <a class="nav-link" routerLink="/dashboardpage/manageroles">Roles</a></p>
+            </li>
+            <li class="nav-item">
+                <img src="/assets/images/project.jpg" height="40px">
+                <p> <a routerLink="/dashboardpage/project" class="nav-link">Project</a></p>
+            </li>
+            <li class="nav-item">
+                <img src="/assets/images/module.jpg" height="40px">
+                <p> <a routerLink="/dashboardpage/module" class="nav-link">Module</a></p>
+            </li>
+            <li class="nav-item">
+                <img src="/assets/images/circut.jpg" height="40px">
+                <p> <a routerLink="/dashboardpage/submodule" class="nav-link">Submodule</a></p>
+            </li>
+            <li class="nav-item">
+                <img src="/assets/images/task.jpg" height="40px">
+                <p> <a routerLink="/dashboardpage/sprints" class="nav-link">Sprints</a></p>
+            </li>
+            <li class="nav-item">
+                <img src="/assets/images/calender.jpg" height="40px">
+                <p> <a routerLink="/dashboardpage/taskspage" class="nav-link">Task</a></p>
+            </li>
+           
+            <li class="nav-item">
+                <img src="/assets/images/sinle.jpg" height="40px">
+                <p> <a routerLink="/dashboardpage/respnsibilities" class="nav-link">Responsibilitys</a></p>
+            </li>
+            <li class="nav-item">
+                <p><a class="nav-link">>>></a></p>
+            </li>
+        </ul>
+
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-icon (click)="toggleSidenav()">menu</mat-icon>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container-fulid">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2">
+                <ul class="navbar-nav" class="side-img">
+
+                    <li class="nav-item">
+                        <img src="/assets/images/dash.jpg" height="50px">
+                        <p> <a class="nav-link">Dashboard</a></p>
+                    </li>
+                    <li class="nav-item">
+                        <img src="/assets/images/users.jpg" height="50px">
+                        <p> <a class="nav-link">Users</a></p>
+                    </li>
+                    <li class="nav-item">
+                        <img src="/assets/images/grp.jpg" height="50px">
+                        <p> <a class="nav-link">Roles</a></p>
+                    </li>
+                    <li class="nav-item">
+                        <img src="/assets/images/project.jpg" height="50px">
+                        <p> <a class="nav-link">Project</a></p>
+                    </li>
+                    <li class="nav-item">
+                        <img src="/assets/images/module.jpg" height="50px">
+                        <p> <a class="nav-link">Module</a></p>
+                    </li>
+                    <li class="nav-item">
+                        <img src="/assets/images/circut.jpg" height="50px">
+                        <p> <a class="nav-link">Submodule</a></p>
+                    </li>
+                    <li class="nav-item">
+                        <img src="/assets/images/calender.jpg" height="50px">
+                        <p> <a class="nav-link">Task</a></p>
+                    </li>
+                    <li class="nav-item">
+                        <img src="/assets/images/task.jpg" height="50px">
+                        <p> <a class="nav-link">Sprints</a></p>
+                    </li>
+                    <li class="nav-item">
+                        <img src="/assets/images/sinle.jpg" height="50px">
+                        <p> <a class="nav-link">Responsibilitys</a></p>
+                    </li>
+                    <li class="nav-item">
+                        <p><a class="nav-link">>>></a></p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- <div>
+                <mat-card class="col-sm-10" id="page-body">
+                    <mat-card class="col-sm-3" id="page-head">
+                        <mat-card class="col-sm-6">
+                            <img src="assets/images/users.jpg" width="85px">
+                        </mat-card>
+                        <div class="col-sm-6">
+                            <span class="page-head-cont">Users</span>
+                        </div>
+                    </mat-card>
+                    <mat-card class="col-sm-3" id="page-head">
+                        <mat-card class="col-sm-6">
+                            <img src="assets/images/p.jpg" width="90px">
+                        </mat-card>
+                        <div class="col-sm-6">
+                            <span class="page-head-cont">Projects</span>
+                        </div>
+                    </mat-card>
+                    <mat-card class="col-sm-3" id="page-head">
+                        <mat-card class="col-sm-6">
+                            <img src="assets/images/task1.jpg" width="90px">
+                        </mat-card>
+                        <div class="col-sm-6" id="page-head-cont">
+                            <span class="page-head-cont">Tasks</span>
+                        </div>
+                    </mat-card>
+                    <mat-card class="col-sm-5" id="page-bottom" style="text-align: center;">
+
+                        <img src="assets/images/graph.jpg" width="300px">
+
+                    </mat-card>
+                    <mat-card class="col-sm-5" id="page-bottom" style="text-align: center;">
+                        <img src="assets/images/piechart.jpg" width="180px">
+                    </mat-card>
+
+                </mat-card>
+            </div> -->
+
+        <!-- </div>
+
+    </div>
+</div> --> 

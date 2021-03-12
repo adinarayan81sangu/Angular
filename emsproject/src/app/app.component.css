@@ -1,0 +1,10 @@
+ .spacer{
+    flex: 1 1 auto;
+} 
+.btn{
+    flex: 1 1 1  auto;
+} 
+#req{
+    color: red;
+    font-size: 20px;
+}
